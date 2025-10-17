@@ -7,7 +7,9 @@
   transform: translateX(-50%);
   width: 90%;
   max-width: 800px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 1rem;
   padding: 1rem;
@@ -15,7 +17,7 @@
 
 .menu ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   gap: 1.5rem;
   flex-wrap: wrap; 
@@ -27,6 +29,7 @@
 .menu li {
   flex: 1 1 100px; 
   text-align: center;
+  justify-content: center;
 }
 
 .menu figure {

@@ -1,11 +1,11 @@
-import missao from '../assets/missao_tratado.png';
-import mapa from '../assets/mapa_tratado.png';
-import bau from '../assets/bau_tratado.png';
-import camera from '../assets/camera_tratado.png';
-import { Link } from 'react-router-dom'
+import missao from '../assets/bob_esponja/missao.png';
+import mapa from '../assets/bob_esponja/localizacao.png';
+import bau from '../assets/bob_esponja/inventario.png';
+import camera from '../assets/bob_esponja/camera.png';
+import { Link } from 'react-router-dom';
 export function Menu() {
     return (
-        <div className='menu'>
+        <nav className='menu'>
             <ul>
                 <Link to = 'missao'>
                 <li>
@@ -38,6 +38,6 @@ export function Menu() {
                     
                 </li>
             </ul>
-        </div>
+        </nav>
     )
 }
