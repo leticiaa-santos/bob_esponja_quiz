@@ -11,7 +11,6 @@ export function Rotas() {
         <Routes>
             <Route path="/" element={<Inicial />} />
             <Route path="/dsgo" element={<DSGo />} >  
-                <Route index element ={<DSGo/>}/>
                 <Route path="missao" element={<Missao />} /> 
              {/*     <Route path="inventario" element={<Inventario/>} />
                 <Route path="camera" element={<GeolocalizacaoMapa/>} />*/}

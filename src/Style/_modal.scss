@@ -9,11 +9,11 @@ dialog.modal {
   max-height: 80%;
   background: $claro;
   border-radius: 16px;
-  padding: 2rem;
+  padding: 2.5rem;
   text-align: center;
 
 
-  border: 2px solid $destaque-rosa;
+  border: 2px solid $destaque-amarelo;
   box-shadow: 0 0 12px rgba(163, 7, 132, 0.7),
               0 8px 24px rgba(0, 0, 0, 0.4);
 
@@ -21,7 +21,7 @@ dialog.modal {
 
   .titulo {
     margin-bottom: 2rem;
-    color: $destaque-rosa;
+    color: $destaque-amarelo;
     font-size: 1.6rem;
   }
 
@@ -37,7 +37,7 @@ dialog.modal {
     padding: 0.6rem;
     margin-bottom: 1rem;
     border-radius: 6px;
-    border: 2px solid $destaque-rosa;
+    border: 2px solid $destaque-amarelo;
     font-size: 1.2rem;
     background: $claro;
     color: $fundo;

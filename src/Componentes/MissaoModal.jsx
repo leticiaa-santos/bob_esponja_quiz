@@ -51,8 +51,8 @@ export function MissaoModal({ missao, onClose, onConcluir }) {
       />
 
       <div className="modal-botoes">
-        <button onClick={verificarResposta}>Enviar</button>
-        <button onClick={onClose}>Fechar</button>
+        <button className="button_missao" onClick={verificarResposta}>Enviar</button>
+        <button className="button_missao" onClick={onClose}>Fechar</button>
       </div>
 
       {resultado && (

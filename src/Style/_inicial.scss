@@ -5,10 +5,11 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    gap: 20px;
 
     .logo {
-        height: 80%;
+        height: 90%;
+        width: 70%;
+
     }
 
     .entrar {
@@ -22,7 +23,7 @@
         cursor: pointer;
         box-shadow: $sombrasBox;
         transition: transform 0.2s, background 0.3s;
-        justify-content: center;
+        margin-top: 5px;
 
         &:hover {
             transform: scale(1.05);

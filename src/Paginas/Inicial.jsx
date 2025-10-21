@@ -1,4 +1,4 @@
-import logo from '../assets/bob_esponja/logo.webp';
+import logo from '../assets/bob_esponja/inicio.jpg';
 import { useNavigate } from 'react-router-dom';
 
 export function Inicial() {

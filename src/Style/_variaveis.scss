@@ -2,7 +2,7 @@ $fundo: #04010f;
 $claro: #f0ebeb;
 $card:#dcdff2;
 $sombrasBox: 0 4px 10px rgba(0, 0, 0, 0.3);
-$destaque-rosa: #ff3d7f transparent;
+$destaque-amarelo: #ede203 transparent;
 $gradiente-azul: linear-gradient(135deg, #2cd0e5, #2553af);
 $foco: #4c0f32;
 $botao-azul: linear-gradient(135deg, #009cb1, #2553af);
@@ -27,7 +27,7 @@ body {
 }
 
 /* BOTÃO */
-button {
+.button_missao {
   margin-top: 1rem;
   align-self: center;
   background: $gradiente-azul;
@@ -41,18 +41,18 @@ button {
   gap: 20px;
 }
 
-button:hover {
+.button_missao:hover {
   background: $botao-amarelo;
   transform: scale(1.05);
   gap: 30px;
 }
 
-button:focus {
+.button_missao:focus {
   outline: 3px solid #4c0f32;
   outline-offset: 3px;
 }
 
-button[disabled],
+.button_missao[disabled],
 .btn-disabled { 
   color: #0e0404;
   cursor: not-allowed;
