@@ -42,13 +42,40 @@
 }
 @media (max-width: 768px) {
     h1 {
-      font-size: 2rem; // título menor em tablet
+
+      font-size: 2rem; // título menor em tablet​
+
     }
 
     p {
+
       font-size: 1rem;
+
     }
+
+    img {
+      height: 90%;
+      width: 40%;
+    }
+
   }
 
+  @media (max-width: 480px) {
+
+    padding: 1rem;
+
+    h1 {
+
+      font-size: 1.6rem; // título ainda menor em celular​
+
+    }
+
+    p {
+
+      font-size: 0.9rem;
+
+    }
+
+  }
 
 }
