@@ -3,6 +3,7 @@ import missao from '../assets/bob_esponja/missao.png';
 import mapa from '../assets/bob_esponja/localizacao.png';
 import bau from '../assets/bob_esponja/inventario.png';
 import camera from '../assets/bob_esponja/camera.png';
+import espatula from '../assets/bob_esponja/icon_espatula.png';
 import { Link } from 'react-router-dom';
 
 export function Menu() {
@@ -12,7 +13,10 @@ export function Menu() {
     <nav className='menu'>
       {/* Botão para abrir/fechar no mobile */}
       <button className='menu-dropdown' onClick={() => setOpen(!open)}>
-        ☰ Menu
+        <section className='icon-menu'>
+          <img src={espatula} alt="imagem da espatula do bob esponja" />
+          Menu
+        </section>
       </button>
 
       {/* Lista de itens do menu */}

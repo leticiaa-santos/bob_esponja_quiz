@@ -17,6 +17,12 @@
     font-size: 1.2rem;
     cursor: pointer;
     margin-bottom: 0.5rem;
+    
+    .icon-menu {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
   }
 
   ul {
@@ -55,7 +61,12 @@
   a {
     text-decoration: none;
   }
+
+  
 }
+
+
+
 
 // Responsividade
 @media (max-width: 768px) {
