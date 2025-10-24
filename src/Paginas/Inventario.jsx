@@ -32,14 +32,16 @@ export function Inventario() {
       {figurinhas.length === 0 ? (
         <p className="vazio">Nenhuma figurinha coletada ainda!</p>
       ) : (
-        <div className="grid">
+        <section className="grid" aria-label="Lista de figurinhas coletadas">
           {figurinhas.map((f) => (
-            <div key={f.id} className="figurinha">
-              <img src={f.imagem} alt={f.nome} />
-             
-            </div>
+            <article key={f.id} className="figurinha">
+              <figure>
+                <img src={f.imagem} alt={f.nome} />
+                <figcaption>{f.nome}</figcaption>
+              </figure>
+            </article>
           ))}
-        </div>
+        </section>
       )}
     </main>
   );

@@ -19,9 +19,9 @@ dialog.modal {
 
   z-index: 1000;
 
-  .titulo {
+  #titulo-missao {
     margin-bottom: 2rem;
-    color: $destaque-amarelo;
+    color: #2553af;
     font-size: 1.6rem;
   }
 
@@ -41,7 +41,7 @@ dialog.modal {
     font-size: 1.2rem;
     background: $claro;
     color: $fundo;
-    
+    margin-top: 10px;
   }
 
   .modal-botoes {

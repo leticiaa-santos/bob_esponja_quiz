@@ -37,7 +37,7 @@ export function MissaoModal({ missao, onClose, onConcluir }) {
       </h2>
       <p id="descricao-missao">{missao.descricao}</p>
 
-      <label htmlFor="resposta" className="sr-only">
+      <label htmlFor="resposta" className="label-resposta">
         Digite sua resposta
       </label>
       <input
@@ -50,13 +50,13 @@ export function MissaoModal({ missao, onClose, onConcluir }) {
         required
       />
 
-      <div className="modal-botoes">
+      <footer className="modal-botoes">
         <button className="button_missao" onClick={verificarResposta}>Enviar</button>
         <button className="button_missao" onClick={onClose}>Fechar</button>
-      </div>
+      </footer>
 
       {resultado && (
-        <div className="resultado">
+        <section className="resultado">
           <p>{resultado}</p>
           {status === "sucesso" && (
             <img
@@ -72,7 +72,7 @@ export function MissaoModal({ missao, onClose, onConcluir }) {
               width="500"
             />
           )}
-        </div>
+        </section>
       )}
     </dialog>
   );

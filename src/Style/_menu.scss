@@ -1,5 +1,3 @@
-@use './variaveis' as *;
-
 .menu {
   position: fixed;
   bottom: 20px;
@@ -7,86 +5,90 @@
   transform: translateX(-50%);
   width: 90%;
   max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 1rem;
   padding: 1rem;
+
+  .menu-dropdown {
+    display: none; // escondido por padrão
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: max-height 0.3s ease;
+  }
+
+  li {
+    flex: 1 1 100px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    color: white;
+    font-size: 1rem;
+  }
+
+  img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }
 
-.menu ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap; 
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  flex: 1 1 100px; 
-  text-align: center;
-  justify-content: center;
-}
-
-.menu figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-  color: white;
-  font-size: 1rem;
-}
-
-.menu img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 0.5rem;
-}
-
-.menu a{
-  text-decoration: none;
-}
-
+// Responsividade
 @media (max-width: 768px) {
-
   .menu img {
-
     width: 50px;
-
     height: 50px;
-
   }
 
   .menu figure {
-
     font-size: 0.9rem;
-
   }
-
 }
 
-/* Celulares pequenos */
-
 @media (max-width: 480px) {
+  .menu {
+    .menu-dropdown {
+      display: block; // botão visível no mobile
+    }
 
-  .menu ul {
+    ul {
+      flex-direction: column;
+      gap: 0.5rem;
+      max-height: 0; // escondido por padrão
+      overflow: hidden;
+    }
 
-    flex-direction: column;
+    ul.open {
+      max-height: 500px; // altura suficiente para mostrar todos os itens
+    }
 
-    gap: 0.5rem;
-
+    li {
+      flex: none;
+      width: 100%;
+    }
   }
-
-  .menu li {
-
-    flex: none;
-
-    width: 100%;
-
-  }
-
 }

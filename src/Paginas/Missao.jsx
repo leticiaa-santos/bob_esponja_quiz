@@ -15,7 +15,7 @@ export function Missao() {
   return (
     <section className='conteiner'>
       <h2>Missões</h2>
-      <div className="missoes-grid">
+      <section className="missoes-grid">
         {missoes.map((m) => (
           <MissaoCard
             key={m.id} 
@@ -24,7 +24,7 @@ export function Missao() {
             concluida={missoesConcluidas.includes(m.id)} 
           />
         ))}
-      </div>
+      </section>
 
       {missaoSelecionada && (
         <MissaoModal 

@@ -12,6 +12,7 @@
   overflow-y: auto;
   max-height: 80vh;
   /* scroll controlado */
+  scrollbar-gutter: stable both-edges;
 
   /* scroll estilizado */
   scrollbar-width: thin;
@@ -27,6 +28,8 @@
 
   &::-webkit-scrollbar-track {
     background: transparent;
+    margin-block: 10px;
+    margin-inline: 6px;
   }
 }
 
@@ -35,11 +38,10 @@
   margin-bottom: 1rem;
   font-size: 2rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #2553af;
+  color: #ede203 ;
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 /* GRID DE MISSÕES */
