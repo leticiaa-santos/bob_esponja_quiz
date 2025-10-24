@@ -22,12 +22,11 @@ export function Inventario() {
 
 
   return (
-    <main className="conteiner">
-        <section className="inventario">
+    <main className="inventario">
       <h2>Inventário</h2>
       <button className="limpar-inventario" onClick={limparInventario}>
-            Limpar Inventário
-          </button>
+        Limpar Inventário
+      </button>
 
       {/* Caso o jogador ainda não tenha nenhuma figurinha */}
       {figurinhas.length === 0 ? (
@@ -42,7 +41,6 @@ export function Inventario() {
           ))}
         </div>
       )}
-      </section>
     </main>
   );
 }

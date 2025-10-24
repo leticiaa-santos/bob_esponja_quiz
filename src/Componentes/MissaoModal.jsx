@@ -1,6 +1,6 @@
 import { useState } from "react";
-import sucesso from "../assets/win.png";
-import erro from "../assets/raios.png";
+import sucesso from "../assets/figurinhas/bob_arco_iris.png";
+import erro from "../assets/figurinhas/lula_erro_harmonizado.png";
 
 export function MissaoModal({ missao, onClose, onConcluir }) {
   const [resposta, setResposta] = useState("");
@@ -23,7 +23,7 @@ export function MissaoModal({ missao, onClose, onConcluir }) {
       // ✅ chama a função de concluir após 1s (tempo para mostrar feedback)
       setTimeout(() => {
         onConcluir(missao.id);
-      }, 1000);
+      }, 5000);
     } else {
       setResultado("Resposta incorreta. Tente novamente!");
       setStatus("erro");
@@ -62,14 +62,14 @@ export function MissaoModal({ missao, onClose, onConcluir }) {
             <img
               src={sucesso}
               alt="Missão concluída com sucesso"
-              width="100"
+              width="500"
             />
           )}
           {status === "erro" && (
             <img
               src={erro}
               alt="Erro na resposta da missão"
-              width="100"
+              width="500"
             />
           )}
         </div>

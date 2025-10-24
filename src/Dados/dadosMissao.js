@@ -2,67 +2,50 @@ export const missoes = [
   {
     id: 1,
     titulo: "Conhecimentos Gerais",
-    missao: "Advinha quem eu sou",    
-    descricao: "Pessoal, hoje vai ter prova",    
-    respostaCorreta: "Dorival",
+    missao: "Qual a resposta?",    
+    descricao: "O Ramal é filho de quem?",    
+    respostaCorreta: "Kamila",
     status: 'disponivel' 
   },
   {
     id: 2,
     titulo: "Conhecimentos Gerais",
-    missao: "Advinha quem eu sou",   
-    descricao: "A bola é minha! Essa frase é conhecida por qual professor(a)?",
-    respostaCorreta: "Marcia",
+    missao: "Qual a resposta?",   
+    descricao: "Quem é o professor mais autônomo?",
+    respostaCorreta: "Modesto",
     status: 'disponivel'
   },
   {
     id: 3,
     titulo: "Conhecimentos Gerais",
-    missao: "Advinha quem eu sou",   
-    descricao: "O que é um projeto? Qual é o professor que relembra esse conceito todas vezes possíveis?",
+    missao: "Qual a resposta?",   
+    descricao: "Intervalo pessoal, como são 15 minutos, vocês voltam 9:20. Qual a professora",
     respostaCorreta: "Fernanda",
     status: 'disponivel'
   },
   {
     id: 4,
     titulo: "Conhecimentos Gerais",
-    missao: "Advinha quem eu sou",   
-    descricao: "Hellllowwwww Sextooouuuuuuuu, é a frase favorita de qual professor?",
-    respostaCorreta: "Mariany",
+    missao: "Qual a resposta?",   
+    descricao: "Qual foi a linguagem que aprendemos em algoritmos?",
+    respostaCorreta: "Python",
     status: 'disponivel'
   },
   {
     id: 5,
     titulo: "Conhecimentos Gerais",
-    missao: "Advinha quem eu sou",   
-    descricao: "E agora com vocês .... os patronos do conhecimento... Vocês",
-    respostaCorreta: "Israel",
-    status: 'disponivel'
-  }
-  ,
-  {
-    id: 6,
-    titulo: "Conhecimentos Gerais",
-    missao: "Advinha quem eu sou",   
-    descricao: "Tem contraste? tem placeholder?",
-    respostaCorreta: "Mariany",
+    missao: "Qual a resposta?",   
+    descricao: "Qual a primeira coisa que é preciso fazer para programar em dart",
+    respostaCorreta: "import io:dart",
     status: 'disponivel'
   },
   {
-    id: 7,
+    id: 6,
     titulo: "Conhecimentos Gerais",
-    missao: "O que eu sou?",   
-    descricao: "Toda tabela tem?",
-    respostaCorreta: "Chave Primaria",
+    missao: "Qual a resposta?",   
+    descricao: "Frase do porf ____ 'Tchau, bom final de semana, beijo nas crianças'",
+    respostaCorreta: "Israel",
     status: 'disponivel'
-  }
-  ,
-  {
-    id: 8,
-    titulo: "Conhecimentos Gerais",
-    missao: "O que eu sou?",   
-    descricao: "Um codigo de excelecia tem .... code",
-    respostaCorreta: "Clean",
-    status: 'disponivel'
-  }
+  },
+  
 ];

@@ -2,12 +2,12 @@
 
 /* CONTAINER PRINCIPAL */
 .conteiner {
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
   padding: 3rem 3.5rem;
   border-radius: 20px;
   color: #dfcaf9;
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 2rem auto 7rem auto;
   overflow-y: auto;
   max-height: 80vh;
@@ -32,10 +32,14 @@
 
 /* TÍTULO */
 .conteiner h2 {
-  text-align: center;
   margin-bottom: 1rem;
   font-size: 2rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #2553af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 /* GRID DE MISSÕES */
@@ -81,4 +85,58 @@
   font-size: 1rem;
   margin-bottom: 0.5rem;
   color: #6a1b9a;
+}
+
+@media (max-width: 768px) {
+
+  .conteiner {
+
+    width: 600px;
+
+  }
+
+  .conteiner h2 {
+
+    font-size: 1.6rem;
+
+  }
+
+  .missoes-grid {
+
+    gap: 1rem;
+
+  }
+
+  .missao-card {
+
+    padding: 1rem;
+
+    min-height: 180px;
+
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .conteiner {
+
+    max-width: 95%;
+
+    padding: 1.5rem 1rem;
+
+  }
+
+  .conteiner h2 {
+
+    font-size: 1.4rem;
+
+  }
+
+  .missao-card {
+
+    font-size: 0.9rem;
+
+  }
+
 }

@@ -14,7 +14,7 @@ dialog.modal {
 
 
   border: 2px solid $destaque-amarelo;
-  box-shadow: 0 0 12px rgba(163, 7, 132, 0.7),
+  box-shadow: 0 0 12px #2553af,
               0 8px 24px rgba(0, 0, 0, 0.4);
 
   z-index: 1000;
@@ -60,3 +60,83 @@ dialog.modal {
     width: 100px;
   }
 }
+
+
+@media (max-width: 768px) {
+
+  dialog.modal {
+
+    width: 70%;
+    max-height: 85%;
+
+    padding: 1.8rem;
+
+    .titulo {
+
+      font-size: 1.4rem;
+
+    }
+
+    .caixaTexto {
+
+      width: 85%;
+
+      font-size: 1rem;
+
+    }
+
+    button {
+
+      font-size: 0.95rem;
+
+      padding: 0.5rem 1rem;
+
+    }
+
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  dialog.modal {
+
+    width: 90%;
+
+    max-height: 90%;
+
+    padding: 1.5rem;
+
+
+    .titulo {
+
+      font-size: 1.2rem;
+
+    }
+
+    .caixaTexto {
+
+      width: 90%;
+
+      font-size: 0.9rem;
+
+    }
+
+    button {
+
+      font-size: 0.85rem;
+
+      padding: 0.4rem 0.8rem;
+
+    }
+
+    img {
+
+      width: 80px;
+
+    }
+
+  }
+
+}
+

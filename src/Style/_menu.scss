@@ -51,3 +51,42 @@
   text-decoration: none;
 }
 
+@media (max-width: 768px) {
+
+  .menu img {
+
+    width: 50px;
+
+    height: 50px;
+
+  }
+
+  .menu figure {
+
+    font-size: 0.9rem;
+
+  }
+
+}
+
+/* Celulares pequenos */
+
+@media (max-width: 480px) {
+
+  .menu ul {
+
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+  }
+
+  .menu li {
+
+    flex: none;
+
+    width: 100%;
+
+  }
+
+}
