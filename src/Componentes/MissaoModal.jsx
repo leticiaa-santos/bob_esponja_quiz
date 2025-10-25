@@ -20,7 +20,7 @@ export function MissaoModal({ missao, onClose, onConcluir }) {
       setResultado("Resposta correta! Parabéns!");
       setStatus("sucesso");
 
-      // ✅ chama a função de concluir após 1s (tempo para mostrar feedback)
+      // chama a função de concluir após 5s
       setTimeout(() => {
         onConcluir(missao.id);
       }, 5000);
@@ -31,7 +31,13 @@ export function MissaoModal({ missao, onClose, onConcluir }) {
   };
 
   return (
-    <dialog open className="modal">
+    <dialog
+      open
+      className="modal"
+      role="dialog"
+      aria-labelledby="titulo-missao"
+      aria-describedby="descricao-missao"
+    >
       <h2 className="titulo" id="titulo-missao">
         {missao.titulo}
       </h2>
@@ -51,12 +57,20 @@ export function MissaoModal({ missao, onClose, onConcluir }) {
       />
 
       <footer className="modal-botoes">
-        <button className="button_missao" onClick={verificarResposta}>Enviar</button>
-        <button className="button_missao" onClick={onClose}>Fechar</button>
+        <button className="button_missao" onClick={verificarResposta}>
+          Enviar
+        </button>
+        <button className="button_missao" onClick={onClose}>
+          Fechar
+        </button>
       </footer>
 
       {resultado && (
-        <section className="resultado">
+        <section
+          className="resultado"
+          role="alert"
+          aria-live="assertive"
+        >
           <p>{resultado}</p>
           {status === "sucesso" && (
             <img

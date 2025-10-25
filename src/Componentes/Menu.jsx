@@ -12,7 +12,12 @@ export function Menu() {
   return (
     <nav className='menu'>
       {/* Botão para abrir/fechar no mobile */}
-      <button className='menu-dropdown' onClick={() => setOpen(!open)}>
+      <button
+        className='menu-dropdown'
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+        aria-controls="menu-list"
+      >
         <section className='icon-menu'>
           <img src={espatula} alt="imagem da espatula do bob esponja" />
           Menu
@@ -20,31 +25,47 @@ export function Menu() {
       </button>
 
       {/* Lista de itens do menu */}
-      <ul className={open ? 'open' : ''}>
-        <li>
-          <Link to='missao' className='link'>
+      <ul
+        id="menu-list"
+        className={open ? 'open' : ''}
+        role="menu"
+      >
+        {/* Item 1: Missões (link interativo) */}
+        <li role="none">
+          <Link 
+            to='missao' 
+            className='link' 
+            role="menuitem"
+            aria-label="Missões"
+          >
             <figure>
-              <img src={missao} alt="Imagem do bob esponja e patrick estrela abraçados, para Missões" />
-              <figcaption>Missões</figcaption>
+              <img src={missao} alt="Bob Esponja e Patrick abraçados" />
+              <figcaption aria-hidden="true">Missões</figcaption>
             </figure>
           </Link>
         </li>
-        <li>
+
+        
+        <li role="menuitem">
           <figure>
-            <img src={bau} alt="Imagem de uma pasta estilizada com o rosto do bob esponja, para Inventário" />
-            <figcaption>Inventário</figcaption>
+            <img src={bau} alt="Pasta estilizada com o rosto do Bob Esponja" />
+            <figcaption aria-hidden="true">Inventário</figcaption>
           </figure>
         </li>
-        <li>
+
+        
+        <li role="menuitem">
           <figure>
-            <img src={mapa} alt="Imagem da 'placa' que indica a fenda do biquini, para GeoLocalização" />
-            <figcaption>GeoLocalização</figcaption>
+            <img src={mapa} alt="Placa indicando a Fenda do Biquíni" />
+            <figcaption aria-hidden="true">GeoLocalização</figcaption>
           </figure>
         </li>
-        <li>
+
+       
+        <li role="menuitem" >
           <figure>
-            <img src={camera} alt="Imagem do patrick deitado com as mãos no queixo admirando, para Camera" />
-            <figcaption>Camera</figcaption>
+            <img src={camera} alt="Patrick deitado admirando" />
+            <figcaption aria-hidden="true">Camera</figcaption>
           </figure>
         </li>
       </ul>

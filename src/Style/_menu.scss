@@ -1,13 +1,14 @@
 .menu {
   position: fixed;
-  bottom: 20px;
+  bottom: 4px;
   left: 50%;
   transform: translateX(-50%);
+  margin-top: 1rem;
   width: 90%;
   max-width: 800px;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 1rem;
-  padding: 1rem;
+  padding: .8rem;
 
   .menu-dropdown {
     display: none; // escondido por padrão
