@@ -20,7 +20,6 @@ export function Missao() {
       <h2 id="titulo-missoes">Missões</h2>
       <section 
         className="missoes-grid"
-        role="list"
         aria-label="Lista de missões disponíveis"
       >
         {missoes.map((m) => (
