@@ -47,10 +47,17 @@ export function Menu() {
 
         
         <li role="menuitem">
-          <figure>
-            <img src={bau} alt="Pasta estilizada com o rosto do Bob Esponja" />
-            <figcaption aria-hidden="true">Inventário</figcaption>
-          </figure>
+          <Link 
+            to = 'inventario'
+            className = "link"
+            role = 'menuitem'
+            aria-label = "Inventário"
+            >
+            <figure>
+              <img src={bau} alt="Pasta estilizada com o rosto do Bob Esponja" />
+              <figcaption aria-hidden="true">Inventário</figcaption>
+            </figure>
+          </Link>
         </li>
 
         
