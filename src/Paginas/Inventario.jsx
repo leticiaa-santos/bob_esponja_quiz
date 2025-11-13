@@ -37,7 +37,7 @@ export function Inventario() {
             >
               <figure>
                 <img src={f.imagem} alt={f.nome} />
-                <figcaption id={`figurinha-${f.id}`}>{f.nome}</figcaption>
+                <figcaption id={`figurinha-${f.id}`}></figcaption>
               </figure>
             </article>
           ))}

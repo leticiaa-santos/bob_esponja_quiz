@@ -1,11 +1,22 @@
 import { useState } from "react";
-import sucesso from "../assets/figurinhas/bob_arco_iris.png";
-import erro from "../assets/figurinhas/lula_erro_harmonizado.png";
+
+import sucesso1 from "../assets/figurinhas/bob_arco_iris.png";
+import sucesso2 from "../assets/figurinhas/lula_acerto_harmonizado.png";
+import sucesso3 from "../assets/figurinhas/lula_acerto.png";
+
+import erro1 from "../assets/figurinhas/lula_erro_harmonizado.png";
+import erro2 from "../assets/figurinhas/gary_erro.png";
+import erro3 from "../assets/figurinhas/bob_erro.png";
+
+// Listas com as figurinhas
+const figurinhasSucesso = [sucesso1, sucesso2, sucesso3];
+const figurinhasErro = [erro1, erro2, erro3];
 
 export function MissaoModal({ missao, onClose, onConcluir }) {
   const [resposta, setResposta] = useState("");
   const [resultado, setResultado] = useState(null);
   const [status, setStatus] = useState(null);
+  const [figurinhaAtual, setFigurinhaAtual] = useState(null);
 
   const verificarResposta = () => {
     if (!resposta.trim()) {
@@ -20,13 +31,23 @@ export function MissaoModal({ missao, onClose, onConcluir }) {
       setResultado("Resposta correta! Parabéns!");
       setStatus("sucesso");
 
-      // chama a função de concluir após 5s
+      // Escolhe figurinha aleatória de sucesso
+      const aleatoria =
+        figurinhasSucesso[Math.floor(Math.random() * figurinhasSucesso.length)];
+      setFigurinhaAtual(aleatoria);
+
+      // Chama a função de concluir após 5s
       setTimeout(() => {
-        onConcluir(missao.id);
+        onConcluir(missao.id, aleatoria);
       }, 5000);
     } else {
       setResultado("Resposta incorreta. Tente novamente!");
       setStatus("erro");
+
+      // Escolhe figurinha aleatória de erro
+      const aleatoria =
+        figurinhasErro[Math.floor(Math.random() * figurinhasErro.length)];
+      setFigurinhaAtual(aleatoria);
     }
   };
 
@@ -66,23 +87,12 @@ export function MissaoModal({ missao, onClose, onConcluir }) {
       </footer>
 
       {resultado && (
-        <section
-          className="resultado"
-          role="alert"
-          aria-live="assertive"
-        >
+        <section className="resultado" role="alert" aria-live="assertive">
           <p>{resultado}</p>
-          {status === "sucesso" && (
+          {figurinhaAtual && (
             <img
-              src={sucesso}
-              alt="Missão concluída com sucesso"
-              width="500"
-            />
-          )}
-          {status === "erro" && (
-            <img
-              src={erro}
-              alt="Erro na resposta da missão"
+              src={figurinhaAtual}
+              alt="Figurinha do resultado"
               width="500"
             />
           )}
