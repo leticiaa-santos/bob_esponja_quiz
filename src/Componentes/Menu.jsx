@@ -25,57 +25,40 @@ export function Menu() {
       </button>
 
       {/* Lista de itens do menu */}
-      <ul
-        id="menu-list"
-        className={open ? 'open' : ''}
-        role="menu"
-      >
-        {/* Item 1: Missões (link interativo) */}
-        <li role="none">
-          <Link 
-            to='missao' 
-            className='link' 
-            role="menuitem"
-            aria-label="Missões"
-          >
-            <figure>
-              <img src={missao} alt="Bob Esponja e Patrick abraçados" />
-              <figcaption aria-hidden="true">Missões</figcaption>
-            </figure>
-          </Link>
-        </li>
-
-        
-        <li role="menuitem">
-          <Link 
-            to = 'inventario'
-            className = "link"
-            role = 'menuitem'
-            aria-label = "Inventário"
-            >
-            <figure>
-              <img src={bau} alt="Pasta estilizada com o rosto do Bob Esponja" />
-              <figcaption aria-hidden="true">Inventário</figcaption>
-            </figure>
-          </Link>
-        </li>
-
-        
-        <li role="menuitem">
+     <ul id="menu-list" className={open ? 'open' : ''}>
+      <li>
+        <Link to='missao' className='link' aria-label="Missões">
           <figure>
-            <img src={mapa} alt="Placa indicando a Fenda do Biquíni" />
-            <figcaption aria-hidden="true">GeoLocalização</figcaption>
+            <img src={missao} alt="Bob Esponja e Patrick abraçados" />
+            <figcaption aria-hidden="true">Missões</figcaption>
           </figure>
-        </li>
+        </Link>
+      </li>
 
-       
-        <li role="menuitem" >
+      <li>
+        <Link to='inventario' className='link' aria-label="Inventário">
           <figure>
-            <img src={camera} alt="Patrick deitado admirando" />
-            <figcaption aria-hidden="true">Camera</figcaption>
+            <img src={bau} alt="Pasta estilizada com o rosto do Bob Esponja" />
+            <figcaption aria-hidden="true">Inventário</figcaption>
           </figure>
-        </li>
-      </ul>
+        </Link>
+      </li>
+
+      <li>
+        <figure>
+          <img src={mapa} alt="Placa indicando a Fenda do Biquíni" />
+          <figcaption aria-hidden="true">GeoLocalização</figcaption>
+        </figure>
+      </li>
+
+      <li>
+        <figure>
+          <img src={camera} alt="Patrick deitado admirando" />
+          <figcaption aria-hidden="true">Camera</figcaption>
+        </figure>
+      </li>
+    </ul>
+
     </nav>
   );
 }
