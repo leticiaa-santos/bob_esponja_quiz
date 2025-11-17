@@ -52,10 +52,13 @@ export function Menu() {
       </li>
 
       <li>
-        <figure>
-          <img src={camera} alt="Patrick deitado admirando" />
-          <figcaption aria-hidden="true">Camera</figcaption>
-        </figure>
+        <Link to='camera' className='link' aria-label='Camera'>
+          <figure>
+            <img src={camera} alt="Patrick deitado admirando" />
+            <figcaption aria-hidden="true">Camera</figcaption>
+          </figure>
+        </Link>
+        
       </li>
     </ul>
 
