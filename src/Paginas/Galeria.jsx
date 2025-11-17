@@ -18,7 +18,7 @@ export function Galeria() {
       <h2>Galeria de Fotos</h2>
 
       {fotos.length === 0 ? (
-        <p>Nenhuma foto ainda! Tire uma com a câmera.</p>
+        <p className="galeria-vazia">Nenhuma foto ainda! Tire uma com a câmera.</p>
       ) : (
         <ImageList
           sx={{
