@@ -2,17 +2,26 @@ import { useState } from "react";
 import { Camera } from "../Componentes/Camera";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+import toast, { Toaster } from "react-hot-toast";
 
 export function Galeria() {
   const [fotos, setFotos] = useState([]);
 
   // Função chamada toda vez que a câmera tira uma nova foto
   const adicionarFoto = (novaFoto) => {
-    setFotos((prevFotos) => [...prevFotos, novaFoto]);
+    setFotos((prevFotos) => {
+      const atualizadas = [...prevFotos, novaFoto];
+      
+      if (atualizadas.length % 3 === 0) {
+        toast.success(`Você já tirou ${atualizadas.length} fotos!`);
+      }
+      return atualizadas;
+    });
   };
 
   return (
     <main className="conteiner">
+      <Toaster position="top-right" />
       <Camera onFotoTirada={adicionarFoto} />
 
       <h2>Galeria de Fotos</h2>
