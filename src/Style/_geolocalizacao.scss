@@ -1,0 +1,168 @@
+@use './variaveis' as *;
+
+.sessao-mapa {
+  display: flex;
+  height: 70vh;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 20px;
+
+    /* ======== TABLET ======== */
+  @media (max-width: 1024px) {
+    height: auto;
+  }
+
+  /* ======== CELULAR ======== */
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+}
+
+/* Painel do formulário */
+.form-mapa {
+  width: 400px;
+  background: $claro;
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(6px);
+  border: 1px solid $azul;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: white;
+
+   /* ======== TABLET ======== */
+  @media (max-width: 1024px) {
+    width: 300px;
+  }
+
+  /* ======== CELULAR ======== */
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    padding: 15px;
+  }
+
+  h2 {
+    text-align: center;
+    color: $azul;
+    margin-bottom: 10px;
+  }
+
+  /* Fieldsets */
+  fieldset {
+    border: 1px solid $azul;
+    padding: 15px;
+    border-radius: 10px;
+
+     @media (max-width: 480px) {
+      padding: 10px;
+    }
+
+    legend {
+      padding: 0 10px;
+      color: $azul;
+      font-weight: bold;
+    }
+
+    /* Botões internos */
+    button {
+      width: 100%;
+      padding: 8px;
+      background: $azul;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+      transition: 0.2s ease;
+
+      &:hover {
+        background: #009cb1;
+      }
+    }
+
+    label{
+      color: $azul;
+    }
+
+  }
+
+  /* Inputs */
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid $azul;
+    background: rgba(255, 255, 255, 0.08);
+    color: $azul;
+
+    &:focus {
+      outline: none;
+      border-color: $azul;
+    }
+
+    label{
+      color: $azul;
+    }
+  }
+
+  /* Botão Gerar Rota */
+  .btnGerar {
+    width: 100%;
+    padding: 10px;
+    background: $azul;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+
+    &:hover {
+      background: #009cb1;
+    }
+  }
+
+  /* Mensagem de erro */
+  .error {
+    color: #b61818;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mapa */
+
+#mapa{
+  height: 70vh;
+
+  @media (max-width: 768px) {
+    height: 350px;
+  }
+
+  @media (max-width: 480px) {
+    height: 320px;
+  }
+}
+
+.mapa-container {
+  flex: 1;
+  border-radius: 15px;
+  box-shadow: 0 0 10px $amarelo;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    min-height: 650px;
+  }
+
+  @media (max-width: 480px) {
+    min-height: 420px;
+  }
+}

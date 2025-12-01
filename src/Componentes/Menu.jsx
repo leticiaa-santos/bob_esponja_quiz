@@ -45,10 +45,12 @@ export function Menu() {
       </li>
 
       <li>
+        <Link to='geolocalizacao' className='link' aria-label="Geolocalização">
         <figure>
           <img src={mapa} alt="Placa indicando a Fenda do Biquíni" />
           <figcaption aria-hidden="true">GeoLocalização</figcaption>
         </figure>
+        </Link>
       </li>
 
       <li>

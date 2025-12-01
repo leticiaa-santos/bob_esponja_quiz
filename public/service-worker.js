@@ -1,47 +1,38 @@
-const CACHE_NAME = 'dsesponja-cache-v1';
-const URLS_TO_CACHE = [
-    '/',
-    '/index.html',
+const CACHE_NAME = "meu-app-cache-v1";
+
+const FILES_TO_CACHE = [
+  "/",
+  "/index.html",
+  "/manifest.json",
+  "/favicon.png"
 ];
 
-//Instala e adiciona arquivos ao cache
-self.addEventListener('install', (event) => {
-    console.log('[SW] Intalando Service Worker e cacheando arquivos...');
-    event.waitUntil(
-        caches.open(CACHE_NAME)
-        .then((cache) => cache.addAll(URLS_TO_CACHE))
-        .then(() => self.skipWaiting())
-    );
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(FILES_TO_CACHE);
+    })
+  );
 });
 
-//Ativa e remove caches antigos
-self.addEventListener('activate', (event) => {
-    console.log('[SW] Ativando Service Worker e removendo caches antigos...');
-    event.waitUntil(
-        caches.keys().then((keys) =>
-            Promise.all(
-                keys
-                    .filter((key) => key !== CACHE_NAME)
-                    .map((key) => caches.delete(key))
-            )
-        )
-    );
-    self.clients.claim();
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) => {
+      return Promise.all(
+        keys.map((key) => {
+          if (key !== CACHE_NAME) {
+            return caches.delete(key);
+          }
+        })
+      );
+    })
+  );
 });
 
-// Intercepta requisições
-self.addEventListener('fetch', (event) => {
-    if (event.request.mode === 'navigate') {
-        event.respondWith(
-            fetch(event.request)
-                .then((response) => response)
-                .catch(() => caches.match('/fallback.html'))
-        );
-    } else {
-        event.respondWith(
-            caches.match(event.request).then((cachedResponse) => {
-                return cachedResponse || fetch(event.request);
-            })
-        );
-    }
+self.addEventListener("fetch", (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      return response || fetch(event.request).catch(() => caches.match("/index.html"));
+    })
+  );
 });

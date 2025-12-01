@@ -1,0 +1,16 @@
+{
+  "short_name": "DSesponja",
+  "name": "Quiz DSesponja",
+  "start_url": "/",
+  "background_color": "#f0ebeb",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#ff4fd8",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "60x120",
+      "type": "image/png"
+    }
+  ]
+}
